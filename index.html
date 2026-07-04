@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OVA · Ecosistemas Educativos Conectados — UIIX</title>
+<meta name="description" content="Objeto Virtual de Aprendizaje del MOOC Ecosistemas Educativos Conectados: Currículo, Transmedia y Mediación Crítica de la IA — Doctorado en Educación e Innovación, UIIX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+<header class="site-header">
+  <div class="site-header__bar">
+    <a class="brand" href="#inicio">
+      <span class="brand__mark">UI</span>
+      <span class="brand__text">
+        <strong>OVA · Ecosistemas Educativos Conectados</strong>
+        <span>Doctorado en Educación e Innovación · UIIX</span>
+      </span>
+    </a>
+    <div class="progress-chip" title="Puntos acumulados en las actividades gamificadas">⭐ <span id="puntos-total">0</span> pts</div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="nav" id="site-nav" aria-label="Menú principal">
+      <a class="nav__link" href="#inicio">Inicio</a>
+      <a class="nav__link" href="#unidad-1">Unidad 1</a>
+      <a class="nav__link" href="#unidad-2">Unidad 2</a>
+      <a class="nav__link" href="#unidad-3">Unidad 3</a>
+      <a class="nav__link" href="#unidad-4">Unidad 4</a>
+      <a class="nav__link" href="#autoevaluacion">Autoevaluación</a>
+      <a class="nav__link" href="#rubrica">Rúbrica</a>
+      <a class="nav__link" href="#agente">Agente Virtual</a>
+      <a class="nav__link" href="#recursos">Recursos</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- ============================================================ INICIO ============================================================ -->
+<section id="inicio" class="hero">
+  <div class="container">
+    <span class="hero__eyebrow">Objeto Virtual de Aprendizaje · Implementación del MOOC</span>
+    <h1>Ecosistemas Educativos Conectados: Currículo, Transmedia y Mediación Crítica de la IA</h1>
+    <p class="lead">Curso completo para docentes y directivos, diseñado para transitar de un ecosistema digital fragmentado hacia
+    una arquitectura unificada, inclusiva, transmedia y éticamente gobernada frente a la inteligencia artificial generativa.</p>
+    <div class="hero__meta">
+      <span class="pill">🎓 Doctorado en Educación e Innovación</span>
+      <span class="pill">🗓️ 4 unidades · 40 horas</span>
+      <span class="pill">🧩 Actividades gamificadas</span>
+      <span class="pill">🤖 Agente virtual con voz</span>
+    </div>
+    <div style="display:flex; gap:14px; flex-wrap:wrap;">
+      <a class="btn btn--primary" href="#unidad-1">Comenzar Unidad 1</a>
+      <a class="btn btn--outline" href="#autoevaluacion">Ir a la autoevaluación</a>
+    </div>
+
+    <div class="map-net">
+      <h3 style="color:#fff;">Mapa general del curso</h3>
+      <div class="map-net__grid">
+        <a class="map-node" href="#unidad-1">
+          <span class="map-node__num">01</span>
+          <h3>Arquitecturas Distribuidas y Unificación del Ecosistema Digital</h3>
+          <p>Semana 1 · 10 horas — MS Teams y OneDrive como arquitectura unificada.</p>
+        </a>
+        <a class="map-node" href="#unidad-2">
+          <span class="map-node__num">02</span>
+          <h3>Actividades Auténticas e Inclusión Digital por Diseño (DUA)</h3>
+          <p>Semana 2 · 10 horas — Diseño inverso y equidad socio-técnica.</p>
+        </a>
+        <a class="map-node" href="#unidad-3">
+          <span class="map-node__num">03</span>
+          <h3>Narrativas Transmedia y Literacidad Crítica en el Aula</h3>
+          <p>Semana 3 · 10 horas — De prosumidores a creadores críticos.</p>
+        </a>
+        <a class="map-node" href="#unidad-4">
+          <span class="map-node__num">04</span>
+          <h3>Inteligencia Artificial en la Escuela: Ética y Políticas Públicas</h3>
+          <p>Semana 4 · 10 horas — Gobernanza participativa de la IA.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="progreso-h">
+  <div class="container">
+    <span class="section-eyebrow">Tu progreso</span>
+    <h2 id="progreso-h">Puntos e insignias</h2>
+    <p class="small">Gana puntos completando las actividades gamificadas de cada unidad y la autoevaluación final. Tu progreso se guarda en este navegador.</p>
+    <div class="progress-panel" id="insignias-lista"></div>
+  </div>
+</section>
+
+<!-- ============================================================ UNIDAD 1 ============================================================ -->
+<section id="unidad-1" aria-labelledby="u1-h">
+  <div class="container">
+    <span class="section-eyebrow">Unidad 1 · Semana 1 · 10 horas</span>
+    <h2 id="u1-h">Arquitecturas Distribuidas y Unificación del Ecosistema Digital</h2>
+    <p>Este objeto de aprendizaje introduce al docente en el diagnóstico y rediseño del ecosistema digital institucional,
+    transitando de un modelo fragmentado de plataformas hacia una arquitectura distribuida y centralizada sobre Microsoft 365.</p>
+
+    <div class="unit-card">
+      <div class="unit-grid">
+        <div>
+          <div class="rae-box">
+            <strong>RAE de la unidad:</strong> Diseña una arquitectura digital unificada utilizando MS Teams y OneDrive
+            corporativo para resolver la fragmentación infraestructural y sistematizar la memoria histórica institucional.
+          </div>
+          <h3>Objetivos específicos</h3>
+          <ul class="objetivos-list">
+            <li>Diferenciar el modelo de "aula expandida" del modelo de "aula insular".</li>
+            <li>Configurar un canal estructurado en Microsoft Teams como espacio único de mediación.</li>
+            <li>Sincronizar carpetas maestras en OneDrive corporativo.</li>
+            <li>Elaborar una cartografía digital del Entorno Personal de Aprendizaje (PLE).</li>
+          </ul>
+
+          <h3>Temas y subtemas</h3>
+          <div class="accordion">
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">1.1 Aula expandida vs. aula insular</button>
+              <div class="accordion__panel"><p>Contraste conceptual entre entornos que dialogan con la totalidad de la vida escolar y entornos cerrados que aíslan la experiencia de aprendizaje.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">1.2 Diagnóstico de la fragmentación infraestructural</button>
+              <div class="accordion__panel"><p>Lectura crítica del caso Colegio Castilla IED: blogs personales, Classroom atomizado, videoconferencia subutilizada.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">1.3 Ambientes Virtuales de Aprendizaje (AVA) estructurados</button>
+              <div class="accordion__panel"><p>Criterios de jerarquización, nomenclatura y accesibilidad para configurar un AVA institucional coherente.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">1.4 Gestión del conocimiento en Microsoft 365</button>
+              <div class="accordion__panel"><p>Uso pedagógico —no solo administrativo— de Teams y OneDrive: canales, pestañas, permisos y carpetas maestras.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">1.5 Cartografía del Entorno Personal de Aprendizaje (PLE)</button>
+              <div class="accordion__panel"><p>Herramienta de autodiagnóstico visual para mapear plataformas y decidir cuáles migrar, fusionar o eliminar.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3>Infografía interactiva: Aula expandida vs. aula insular</h3>
+          <div class="info-card" tabindex="0" role="button" aria-label="Voltear infografía">
+            <div class="info-card__inner">
+              <div class="info-card__face info-card__face--front">
+                <h4>🏫 Aula expandida vs. aula insular</h4>
+                <p>Toca la tarjeta para descubrir la comparación.</p>
+                <span class="info-card__hint">Click / Enter para voltear</span>
+              </div>
+              <div class="info-card__face info-card__face--back">
+                <h4>Aula expandida</h4>
+                <p style="font-size:13px;">Dialoga con Teams, OneDrive, correo y foro en un flujo único y visible.</p>
+                <h4>Aula insular</h4>
+                <p style="font-size:13px;">Aislada en un blog personal o canal desconectado del resto del ecosistema.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt-lg">Elementos transmedia</h3>
+      <div class="transmedia-grid">
+        <div class="media-card">
+          <div class="media-card__label">🎬 Video (microlección, 3 min) — "La ilusión de las mil plataformas"</div>
+          <video controls poster="assets/poster-video.svg">
+            <source src="media/videos/unidad1-ilusion-mil-plataformas.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5. Coloca aquí el archivo unidad1-ilusion-mil-plataformas.mp4.
+          </video>
+          <button class="btn btn--ghost btn--sm mt-lg btn-guion" data-target="guion-v1">Ver guion</button>
+          <div class="guion-box" id="guion-v1" hidden>
+            Guion (≈3 min): Presenta el diagnóstico del Colegio Castilla IED: múltiples plataformas pagadas y subutilizadas
+            generan carga cognitiva en docentes, estudiantes y familias. Compara visualmente el "aula insular" (un blog aislado)
+            con el "aula expandida" (Teams + OneDrive integrados). Cierra invitando a centralizar el ecosistema como estrategia
+            pedagógica, no como gasto tecnológico adicional.
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-card__label">🎙️ Podcast reflexivo (1 min) — Cápsula sonora docente</div>
+          <audio controls>
+            <source src="media/podcasts/unidad1-podcast.mp3" type="audio/mpeg">
+            Coloca aquí el archivo unidad1-podcast.mp3.
+          </audio>
+          <button class="btn btn--ghost btn--sm mt-lg btn-guion" data-target="guion-p1">Ver guion</button>
+          <div class="guion-box" id="guion-p1" hidden>
+            Guion (≈1 min): Un docente narra en primera persona una experiencia real de fragmentación digital —perder tiempo
+            buscando un archivo en tres plataformas distintas— y cierra reflexionando sobre lo que cambiaría al centralizar
+            su ecosistema en Teams y OneDrive.
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-card__label">📁 Plantilla descargable</div>
+          <p class="small">Arquitecto de canales Teams-OneDrive: plantilla editable para simular la estructura de canales, pestañas y carpetas maestras.</p>
+          <a class="btn btn--ghost btn--sm" href="media/plantillas/unidad1-arquitecto-canales.md" download>Descargar plantilla</a>
+        </div>
+      </div>
+
+      <h3 class="mt-lg">🎮 Actividad gamificada: Cazadores de plataformas fantasma</h3>
+      <p class="small">Clasifica cada herramienta institucional como usada pedagógicamente o como infraestructura "fantasma" (pagada y subutilizada).</p>
+      <div class="game-box" id="game-u1"></div>
+
+      <h3 class="mt-lg">Ideas principales</h3>
+      <ul class="ideas-list">
+        <li>La dispersión de plataformas incrementa la carga cognitiva de estudiantes, docentes y familias.</li>
+        <li>Centralizar el ecosistema es una estrategia pedagógica de reducción de fricción cognitiva.</li>
+        <li>Teams y OneDrive ya están pagados y subutilizados: la transformación es de uso, no de inversión.</li>
+      </ul>
+      <div class="conclusion-box">
+        <strong>Conclusión:</strong> la transformación digital escolar no depende de nuevas adquisiciones tecnológicas,
+        sino de la resignificación pedagógica de la infraestructura institucional ya disponible.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ UNIDAD 2 ============================================================ -->
+<section id="unidad-2" aria-labelledby="u2-h">
+  <div class="container">
+    <span class="section-eyebrow">Unidad 2 · Semana 2 · 10 horas</span>
+    <h2 id="u2-h">Actividades Auténticas e Inclusión Digital por Diseño (DUA)</h2>
+    <p>Traslada la arquitectura unificada de la Unidad 1 al diseño instruccional, integrando el Diseño Universal para el
+    Aprendizaje (DUA) y el diseño inverso (Backward Design) frente a la conectividad inestable del territorio.</p>
+
+    <div class="unit-card">
+      <div class="unit-grid">
+        <div>
+          <div class="rae-box">
+            <strong>RAE de la unidad:</strong> Estructura guías de aprendizaje virtuales basadas en el marco DUA y el
+            aprendizaje auténtico, garantizando flexibilidad didáctica ante conectividad inestable.
+          </div>
+          <h3>Objetivos específicos</h3>
+          <ul class="objetivos-list">
+            <li>Reconocer los tres principios del DUA aplicados a entornos digitales.</li>
+            <li>Aplicar el diseño instruccional inverso (Backward Design).</li>
+            <li>Diseñar actividades de bajo consumo de datos para equidad socio-técnica.</li>
+            <li>Transformar una guía plana en una secuencia didáctica interactiva.</li>
+          </ul>
+
+          <h3>Temas y subtemas</h3>
+          <div class="accordion">
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">2.1 Principios del DUA en pantallas</button>
+              <div class="accordion__panel"><p>Representación múltiple, acción/expresión y motivación, según las pautas CAST (2018).</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">2.2 Diseño instruccional inverso (Backward Design)</button>
+              <div class="accordion__panel"><p>Planeación que parte de la evidencia de desempeño esperada para retroceder hacia actividades y contenidos.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">2.3 Diseño offline y de bajo consumo de datos</button>
+              <div class="accordion__panel"><p>Estrategias de descarga previa, formatos livianos y actividades asincrónicas para conectividad móvil intermitente.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">2.4 Flexibilidad representativa y andamiaje cognitivo</button>
+              <div class="accordion__panel"><p>Mecanismos de apoyo progresivo: pistas, ejemplos resueltos, glosarios emergentes.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">2.5 Estudio de caso: "El dilema del estudiante Castilla"</button>
+              <div class="accordion__panel"><p>Análisis de un estudiante con datos móviles prepago disponibles solo en horario nocturno.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3>Infografía interactiva: Pautas DUA/CAST</h3>
+          <div class="info-card" tabindex="0" role="button" aria-label="Voltear infografía">
+            <div class="info-card__inner">
+              <div class="info-card__face info-card__face--front">
+                <h4>🚦 Pautas DUA aplicadas a pantallas</h4>
+                <p>Toca para ver los tres bloques del DUA.</p>
+                <span class="info-card__hint">Click / Enter para voltear</span>
+              </div>
+              <div class="info-card__face info-card__face--back">
+                <p style="font-size:13px;"><strong>Representación:</strong> mismo contenido en texto, audio y video.</p>
+                <p style="font-size:13px;"><strong>Acción/expresión:</strong> distintas formas de demostrar aprendizaje.</p>
+                <p style="font-size:13px;"><strong>Motivación:</strong> opciones y relevancia contextual para el estudiante.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt-lg">Elementos transmedia</h3>
+      <div class="transmedia-grid">
+        <div class="media-card">
+          <div class="media-card__label">🎬 Video (3 min) — "Backward Design en 5 minutos"</div>
+          <video controls poster="assets/poster-video.svg">
+            <source src="media/videos/unidad2-backward-design.mp4" type="video/mp4">
+            Coloca aquí el archivo unidad2-backward-design.mp4.
+          </video>
+          <button class="btn btn--ghost btn--sm mt-lg btn-guion" data-target="guion-v2">Ver guion</button>
+          <div class="guion-box" id="guion-v2" hidden>
+            Guion (≈3 min): Explica las tres etapas del diseño inverso —identificar resultados deseados, determinar
+            evidencias aceptables y planear experiencias de aprendizaje— aplicadas a una asignatura escolar, cerrando con
+            el caso del "estudiante Castilla" y su conectividad limitada.
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-card__label">🎙️ Podcast reflexivo (1 min)</div>
+          <audio controls>
+            <source src="media/podcasts/unidad2-podcast.mp3" type="audio/mpeg">
+            Coloca aquí el archivo unidad2-podcast.mp3.
+          </audio>
+          <button class="btn btn--ghost btn--sm mt-lg btn-guion" data-target="guion-p2">Ver guion</button>
+          <div class="guion-box" id="guion-p2" hidden>
+            Guion (≈1 min): Reflexión breve de un docente sobre cómo rediseñó una guía plana en PDF a una secuencia
+            multiformato, y el impacto que tuvo en un estudiante con conectividad intermitente.
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-card__label">🧭 Simulador interactivo</div>
+          <p class="small">"Un día con datos limitados": escenario ramificado donde decides qué formato consumir según la conectividad disponible.</p>
+          <a class="btn btn--ghost btn--sm" href="media/plantillas/unidad2-checklist-dua.md" download>Descargar checklist DUA</a>
+        </div>
+      </div>
+
+      <h3 class="mt-lg">🎮 Actividad gamificada: El semáforo DUA</h3>
+      <p class="small">Clasifica cada actividad según su nivel de flexibilidad de acceso: verde (flexible), amarillo (parcial) o rojo (rígida).</p>
+      <div class="game-box" id="game-u2"></div>
+
+      <h3 class="mt-lg">Ideas principales</h3>
+      <ul class="ideas-list">
+        <li>El DUA beneficia a la totalidad del estudiantado, no solo a "casos especiales".</li>
+        <li>El diseño inverso define primero la evidencia auténtica antes que los recursos.</li>
+        <li>La equidad socio-técnica exige diseñar para el peor escenario de conectividad.</li>
+      </ul>
+      <div class="conclusion-box">
+        <strong>Conclusión:</strong> el caso del "estudiante Castilla" recuerda que la inclusión digital comienza por
+        reconocer las condiciones reales de conectividad del estudiantado.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ UNIDAD 3 ============================================================ -->
+<section id="unidad-3" aria-labelledby="u3-h">
+  <div class="container">
+    <span class="section-eyebrow">Unidad 3 · Semana 3 · 10 horas</span>
+    <h2 id="u3-h">Narrativas Transmedia y Literacidad Crítica en el Aula</h2>
+    <p>Aborda la paradoja de la hiperconexión informal a redes sociales frente al analfabetismo en competencias digitales
+    académicas, capitalizando pedagógicamente ese consumo.</p>
+
+    <div class="unit-card">
+      <div class="unit-grid">
+        <div>
+          <div class="rae-box">
+            <strong>RAE de la unidad:</strong> Desarrolla estrategias pedagógicas transmedia que articulen el uso informal
+            de redes sociales estudiantiles con competencias de argumentación e investigación académica.
+          </div>
+          <h3>Objetivos específicos</h3>
+          <ul class="objetivos-list">
+            <li>Diferenciar consumidor pasivo de prosumidor crítico.</li>
+            <li>Aplicar el modelo de alfabetización crítica de Selwyn.</li>
+            <li>Diseñar un desafío transmedia hacia formatos de consumo estudiantil habitual.</li>
+            <li>Curar Recursos Educativos Abiertos (REA) frente a la desinformación algorítmica.</li>
+          </ul>
+
+          <h3>Temas y subtemas</h3>
+          <div class="accordion">
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">3.1 Modelo de alfabetización crítica de Selwyn</button>
+              <div class="accordion__panel"><p>Distinción entre uso instrumental y uso crítico de la tecnología educativa.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">3.2 Ecologías de aprendizaje expandidas</button>
+              <div class="accordion__panel"><p>El aprendizaje ocurre más allá del LMS: comunidades, plataformas y redes informales.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">3.3 Convergencia mediática y cultura participativa</button>
+              <div class="accordion__panel"><p>Aportes de Jenkins (2006) sobre circulación de contenidos y participación activa de audiencias.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">3.4 Curaduría de Recursos Educativos Abiertos (REA)</button>
+              <div class="accordion__panel"><p>Criterios de selección, licenciamiento abierto y verificación de fuentes.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">3.5 Detección de fake news algorítmicas</button>
+              <div class="accordion__panel"><p>Estrategias para identificar desinformación amplificada por algoritmos de recomendación.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3>Infografía interactiva: Anatomía de una fake news</h3>
+          <div class="info-card" tabindex="0" role="button" aria-label="Voltear infografía">
+            <div class="info-card__inner">
+              <div class="info-card__face info-card__face--front">
+                <h4>🚩 Anatomía de una fake news</h4>
+                <p>Toca para descomponer sus elementos típicos.</p>
+                <span class="info-card__hint">Click / Enter para voltear</span>
+              </div>
+              <div class="info-card__face info-card__face--back">
+                <p style="font-size:13px;">• Reacción emocional intensa<br>• Fuente anónima o no verificable<br>
+                • Urgencia para compartir<br>• Ausencia de referencias<br>• Lenguaje conspirativo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt-lg">Elementos transmedia</h3>
+      <div class="transmedia-grid">
+        <div class="media-card">
+          <div class="media-card__label">🎬 Videotutorial (3 min) — Curaduría avanzada en motores académicos</div>
+          <video controls poster="assets/poster-video.svg">
+            <source src="media/videos/unidad3-curaduria-academica.mp4" type="video/mp4">
+            Coloca aquí el archivo unidad3-curaduria-academica.mp4.
+          </video>
+          <button class="btn btn--ghost btn--sm mt-lg btn-guion" data-target="guion-v3">Ver guion</button>
+          <div class="guion-box" id="guion-v3" hidden>
+            Guion (≈3 min): Compara en pantalla dividida un buscador académico abierto (Google Académico, Redalyc, SciELO)
+            frente a un feed algorítmico de red social, resaltando señales de calidad académica frente a señales de riesgo
+            de desinformación.
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-card__label">🎙️ Podcast reflexivo (1 min)</div>
+          <audio controls>
+            <source src="media/podcasts/unidad3-podcast.mp3" type="audio/mpeg">
+            Coloca aquí el archivo unidad3-podcast.mp3.
+          </audio>
+          <button class="btn btn--ghost btn--sm mt-lg btn-guion" data-target="guion-p3">Ver guion</button>
+          <div class="guion-box" id="guion-p3" hidden>
+            Guion (≈1 min): Un docente reflexiona sobre un hilo estudiantil viral en redes y cómo lo usó como punto de
+            partida para enseñar verificación de fuentes en clase.
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-card__label">📝 Plantilla de guion</div>
+          <p class="small">Guion para hilo explicativo académico: convierte un tema curricular en un hilo breve con rigor argumentativo.</p>
+          <a class="btn btn--ghost btn--sm" href="media/plantillas/unidad3-guion-hilo.md" download>Descargar plantilla</a>
+        </div>
+      </div>
+
+      <h3 class="mt-lg">🎮 Actividad gamificada: Verificador de hilos</h3>
+      <p class="small">Recibe fragmentos de hilos de redes sociales y decide si son confiables o si presentan señales de desinformación.</p>
+      <div class="game-box" id="game-u3"></div>
+
+      <h3 class="mt-lg">Ideas principales</h3>
+      <ul class="ideas-list">
+        <li>La hiperconexión informal no equivale a competencia digital académica.</li>
+        <li>El prosumidor puede volverse creador crítico con estructuras de verificación.</li>
+        <li>La curaduría de REA es una competencia transferible a la vida ciudadana digital.</li>
+      </ul>
+      <div class="conclusion-box">
+        <strong>Conclusión:</strong> la literacidad crítica no se enseña prohibiendo las redes sociales, sino
+        habitándolas con rigor y propósito educativo.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ UNIDAD 4 ============================================================ -->
+<section id="unidad-4" aria-labelledby="u4-h">
+  <div class="container">
+    <span class="section-eyebrow">Unidad 4 · Semana 4 · 10 horas</span>
+    <h2 id="u4-h">Inteligencia Artificial en la Escuela: Ética y Políticas Públicas</h2>
+    <p>Cierra el MOOC abordando la parálisis organizativa frente a la IA generativa, proponiendo la co-construcción de un
+    marco ético-normativo institucional inspirado en los lineamientos de la UNESCO.</p>
+
+    <div class="unit-card">
+      <div class="unit-grid">
+        <div>
+          <div class="rae-box">
+            <strong>RAE de la unidad:</strong> Formula un marco ético-normativo interno y rúbricas de evaluación procesual
+            que orienten el uso epistémico de la IA generativa, mitigando sesgos y plagio mecánico.
+          </div>
+          <h3>Objetivos específicos</h3>
+          <ul class="objetivos-list">
+            <li>Analizar oportunidades y riesgos de la IA generativa en el aula.</li>
+            <li>Aplicar principios básicos de ingeniería de prompts educativos.</li>
+            <li>Reconocer los lineamientos de gobernanza de la IA de la UNESCO (2023).</li>
+            <li>Co-construir una normativa institucional de uso ético de la IA.</li>
+          </ul>
+
+          <h3>Temas y subtemas</h3>
+          <div class="accordion">
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">4.1 Oportunidades y riesgos de la IA generativa en el aula</button>
+              <div class="accordion__panel"><p>Usos pedagógicos legítimos frente a riesgos de dependencia cognitiva y homogeneización.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">4.2 Ingeniería de prompts educativos</button>
+              <div class="accordion__panel"><p>Principios para formular instrucciones claras, contextualizadas y verificables.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">4.3 Marcos institucionales de gobernanza de la IA (UNESCO, 2023)</button>
+              <div class="accordion__panel"><p>Lineamientos internacionales sobre uso responsable de la IA en educación.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">4.4 Sesgos algorítmicos y mitigación del plagio mecánico</button>
+              <div class="accordion__panel"><p>Identificación de sesgos y estrategias de evaluación procesual.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">4.5 Privacidad y datos de menores frente a la IA</button>
+              <div class="accordion__panel"><p>Consideraciones éticas y legales sobre datos de estudiantes menores de edad.</p></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" aria-expanded="false">4.6 Co-construcción de la normativa ética institucional</button>
+              <div class="accordion__panel"><p>Proceso participativo para redactar lineamientos propios de uso de la IA.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3>Infografía interactiva: Semáforo ético del uso de IA</h3>
+          <div class="info-card" tabindex="0" role="button" aria-label="Voltear infografía">
+            <div class="info-card__inner">
+              <div class="info-card__face info-card__face--front">
+                <h4>🛡️ Semáforo ético de IA en el aula</h4>
+                <p>Toca para ver la clasificación de usos.</p>
+                <span class="info-card__hint">Click / Enter para voltear</span>
+              </div>
+              <div class="info-card__face info-card__face--back">
+                <p style="font-size:13px;"><strong>Verde:</strong> apoyo a lluvia de ideas y retroalimentación de escritura.<br>
+                <strong>Amarillo:</strong> generación de borradores con revisión declarada.<br>
+                <strong>Rojo:</strong> entrega de trabajos generados sin mediación ni declaración.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="mt-lg">Elementos transmedia</h3>
+      <div class="transmedia-grid">
+        <div class="media-card">
+          <div class="media-card__label">🎬 Seminario virtual (3 min, versión síntesis) — Gobernanza de la IA según la UNESCO</div>
+          <video controls poster="assets/poster-video.svg">
+            <source src="media/videos/unidad4-gobernanza-ia-unesco.mp4" type="video/mp4">
+            Coloca aquí el archivo unidad4-gobernanza-ia-unesco.mp4.
+          </video>
+          <button class="btn btn--ghost btn--sm mt-lg btn-guion" data-target="guion-v4">Ver guion</button>
+          <div class="guion-box" id="guion-v4" hidden>
+            Guion (≈3 min): Síntesis de la "Guía para la IA generativa en educación" de la UNESCO (2023), con énfasis en
+            la protección de la privacidad de menores y la necesidad de gobernanza participativa, no impuesta verticalmente.
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-card__label">🎙️ Podcast reflexivo (1 min)</div>
+          <audio controls>
+            <source src="media/podcasts/unidad4-podcast.mp3" type="audio/mpeg">
+            Coloca aquí el archivo unidad4-podcast.mp3.
+          </audio>
+          <button class="btn btn--ghost btn--sm mt-lg btn-guion" data-target="guion-p4">Ver guion</button>
+          <div class="guion-box" id="guion-p4" hidden>
+            Guion (≈1 min): Reflexión de un docente sobre la primera vez que detectó un sesgo en una respuesta de IA
+            generativa y cómo eso cambió su forma de formular prompts en clase.
+          </div>
+        </div>
+
+        <div class="media-card">
+          <div class="media-card__label">📄 Micro-guía descargable</div>
+          <p class="small">Cómo programar agentes inteligentes libres: ejemplos de prompts educativos y buenas prácticas.</p>
+          <a class="btn btn--ghost btn--sm" href="media/plantillas/unidad4-microguia-prompts.md" download>Descargar micro-guía</a>
+        </div>
+      </div>
+
+      <h3 class="mt-lg">🎮 Actividad gamificada: Detective de sesgos</h3>
+      <p class="small">Analiza respuestas reales de IA generativa e identifica el tipo de sesgo presente.</p>
+      <div class="game-box" id="game-u4"></div>
+
+      <h3 class="mt-lg">Ideas principales</h3>
+      <ul class="ideas-list">
+        <li>La IA generativa no reemplaza el juicio pedagógico docente.</li>
+        <li>Una ingeniería de prompts clara reduce sesgos y mejora la pertinencia educativa.</li>
+        <li>Evaluar el proceso —no solo el producto— mitiga el plagio mecánico.</li>
+      </ul>
+      <div class="conclusion-box">
+        <strong>Conclusión:</strong> co-construir una normativa ética propia consolida la tecnología digital como
+        herramienta de emancipación cognitiva y no como amenaza a la integridad académica.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ AUTOEVALUACIÓN ============================================================ -->
+<section id="autoevaluacion" aria-labelledby="quiz-h">
+  <div class="container">
+    <span class="section-eyebrow">Cuestionario final</span>
+    <h2 id="quiz-h">Autoevaluación (10 preguntas)</h2>
+    <p class="section-head">Selecciona una respuesta por pregunta. Al calificar recibirás retroalimentación inmediata y un
+    puntaje final, tal como se implementaría en Moodle mediante un cuestionario H5P/Quiz.</p>
+    <form id="quiz-form"></form>
+    <div class="quiz-actions">
+      <button id="quiz-submit" class="btn btn--primary">Calificar autoevaluación</button>
+      <button id="quiz-reset" class="btn btn--ghost">Reiniciar</button>
+    </div>
+    <div id="quiz-result" hidden></div>
+  </div>
+</section>
+
+<!-- ============================================================ RÚBRICA ============================================================ -->
+<section id="rubrica" aria-labelledby="rubrica-h">
+  <div class="container">
+    <span class="section-eyebrow">Evaluación del OVA</span>
+    <h2 id="rubrica-h">Rúbrica de evaluación</h2>
+    <p class="section-head">La evaluación considera cinco criterios de igual peso (1.6 pts c/u) para un total de 8 puntos
+    por actividad, escalable a 100 puntos según los lineamientos institucionales.</p>
+    <div class="table-wrap">
+      <table class="rubrica-table">
+        <thead>
+          <tr>
+            <th>Criterio</th>
+            <th>Excelente (1.6)</th>
+            <th>Satisfactorio (1.2)</th>
+            <th>En desarrollo (0.8)</th>
+            <th>Insuficiente (0.4)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Diagnóstico del ecosistema digital educativo</strong></td>
+            <td>Diagnóstico riguroso con datos empíricos; identifica brechas y necesidades; contextualiza el diseño del MOOC.</td>
+            <td>Diagnóstico adecuado con algunos datos; identifica necesidades sin profundidad contextual.</td>
+            <td>Diagnóstico básico; descripción general sin datos ni vinculación con el diseño.</td>
+            <td>Diagnóstico ausente o no relacionado con el diseño del MOOC.</td>
+          </tr>
+          <tr>
+            <td><strong>2. Fundamentación teórica (Unidad 2)</strong></td>
+            <td>Integra sólidamente ≥4 referentes teóricos articulados con el diseño.</td>
+            <td>Cita 2-3 referentes con relación parcial al diseño.</td>
+            <td>Menciona 1-2 referentes de forma superficial, sin articulación clara.</td>
+            <td>No incorpora referentes teóricos o los cita sin relación.</td>
+          </tr>
+          <tr>
+            <td><strong>3. Diseño instruccional del MOOC</strong></td>
+            <td>Define objetivos SMART, estructura modular coherente, actividades activas variadas, evaluaciones formativas y sumativas alineadas (Biggs, 2003).</td>
+            <td>Objetivos claros, estructura modular básica; actividades y evaluaciones presentes pero con baja diversidad.</td>
+            <td>Objetivos genéricos, estructura parcial; actividades poco diversas, evaluación limitada.</td>
+            <td>Sin objetivos claros, estructura desarticulada o evaluación ausente.</td>
+          </tr>
+          <tr>
+            <td><strong>4. Recursos y estrategias digitales</strong></td>
+            <td>Incorpora recursos multimodales (video, microlearning, transmedia, foros, quizzes) con justificación pedagógica explícita.</td>
+            <td>Incluye recursos digitales variados con justificación parcial.</td>
+            <td>Recursos básicos (texto/PDF); poca variedad, justificación insuficiente.</td>
+            <td>Recursos digitales ausentes o inadecuados para la modalidad MOOC.</td>
+          </tr>
+          <tr>
+            <td><strong>5. Calidad académica y presentación</strong></td>
+            <td>Redacción precisa y coherente en APA 7.ª ed.; presentación profesional; reflexión crítica sobre equidad y contexto latinoamericano.</td>
+            <td>Buena redacción y citación APA con errores menores; presentación adecuada; reflexión parcial.</td>
+            <td>Redacción regular, citación incompleta; presentación mejorable; reflexión crítica escasa.</td>
+            <td>Errores graves de redacción, sin citación APA o presentación deficiente.</td>
+          </tr>
+          <tr>
+            <td class="pts" colspan="4">Puntaje total: 8.0 pts (escalable a 100 pts institucionales)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ AGENTE VIRTUAL ============================================================ -->
+<section id="agente" aria-labelledby="agente-h">
+  <div class="container">
+    <span class="section-eyebrow">Asistencia en tiempo real</span>
+    <h2 id="agente-h">Agente virtual del curso</h2>
+    <p class="section-head">Pregúntale a <strong>Aika</strong> sobre las unidades, la rúbrica, la autoevaluación o las
+    actividades gamificadas. Responde por texto y en voz alta usando la síntesis de voz del navegador. Funciona mejor en
+    Chrome o Edge (escritorio o Android).</p>
+
+    <div class="agent-wrap">
+      <div class="agent-head">
+        <div class="agent-head__avatar">🤖</div>
+        <div>
+          <h3>Aika</h3>
+          <p>Agente virtual del OVA — responde por voz y texto</p>
+        </div>
+      </div>
+      <div id="agent-log" aria-live="polite"></div>
+      <div class="agent-toolbar">
+        <button id="agent-mic" class="btn btn--ghost btn--sm" type="button">🎙️ Hablar</button>
+        <button id="agent-mute" class="btn btn--ghost btn--sm" type="button" aria-pressed="false">🔊 Voz activada</button>
+      </div>
+      <form id="agent-form" class="agent-controls">
+        <input id="agent-input" type="text" placeholder="Escribe tu pregunta sobre el curso…" autocomplete="off">
+        <button class="btn btn--primary btn--sm" type="submit">Enviar</button>
+      </form>
+    </div>
+    <p class="small text-center mt-lg">El reconocimiento de voz requiere permiso del micrófono y conexión a internet en el navegador del visitante.</p>
+  </div>
+</section>
+
+<!-- ============================================================ RECURSOS ============================================================ -->
+<section id="recursos" aria-labelledby="recursos-h">
+  <div class="container">
+    <span class="section-eyebrow">Material de apoyo</span>
+    <h2 id="recursos-h">Recursos y plantillas descargables</h2>
+    <div class="recursos-grid">
+      <div class="recurso-card">
+        <h3>🗂️ Arquitecto de canales Teams-OneDrive</h3>
+        <p class="small">Plantilla editable para simular la estructura de canales, pestañas y carpetas maestras (Unidad 1).</p>
+        <a class="btn btn--ghost btn--sm" href="media/plantillas/unidad1-arquitecto-canales.md" download>Descargar</a>
+      </div>
+      <div class="recurso-card">
+        <h3>✅ Checklist DUA</h3>
+        <p class="small">Lista de verificación de 8 ítems para auditar la flexibilidad de una guía de aprendizaje (Unidad 2).</p>
+        <a class="btn btn--ghost btn--sm" href="media/plantillas/unidad2-checklist-dua.md" download>Descargar</a>
+      </div>
+      <div class="recurso-card">
+        <h3>📝 Guion para hilo explicativo académico</h3>
+        <p class="small">Plantilla para transformar un tema curricular en un hilo breve con rigor argumentativo (Unidad 3).</p>
+        <a class="btn btn--ghost btn--sm" href="media/plantillas/unidad3-guion-hilo.md" download>Descargar</a>
+      </div>
+      <div class="recurso-card">
+        <h3>📄 Micro-guía de prompts educativos</h3>
+        <p class="small">Ejemplos de prompts bien formulados y clasificación semáforo de usos de IA (Unidad 4).</p>
+        <a class="btn btn--ghost btn--sm" href="media/plantillas/unidad4-microguia-prompts.md" download>Descargar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <strong style="color:#fff; font-family: var(--font-display);">OVA · Ecosistemas Educativos Conectados</strong>
+        <p style="margin-top:8px;">Currículo, Transmedia y Mediación Crítica de la IA — Objeto Virtual de Aprendizaje
+        del Doctorado en Educación e Innovación, UIIX. Implementación pensada para Moodle/MoodleCloud, integrado con
+        Microsoft Teams y OneDrive.</p>
+      </div>
+      <div>
+        <strong style="color:#fff;">Autoría</strong>
+        <p>Erika Liced Martínez Ángel<br>Ángela Patricia Gómez Mejía<br>Jorge Eliécer Martínez Bustos</p>
+      </div>
+      <div>
+        <strong style="color:#fff;">Navegación</strong>
+        <p><a href="#unidad-1">Unidad 1</a><br><a href="#unidad-2">Unidad 2</a><br><a href="#unidad-3">Unidad 3</a><br><a href="#unidad-4">Unidad 4</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="anio"></span> UIIX — Universidad de Investigación e Innovación de México. Uso académico.</div>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
