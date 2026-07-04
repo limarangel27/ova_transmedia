@@ -1,0 +1,11 @@
+Coloca aquí los podcasts reflexivos finales de cada unidad (formato .mp3, ≈1 minuto).
+
+Nombres esperados por el sitio:
+- unidad1-podcast.mp3
+- unidad2-podcast.mp3
+- unidad3-podcast.mp3
+- unidad4-podcast.mp3
+
+Los guiones sugeridos ya están escritos dentro de index.html (botón "Ver guion"
+en cada tarjeta de podcast). Puedes grabarlos con los propios docentes o
+generarlos con una herramienta de texto a voz.

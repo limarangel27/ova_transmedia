@@ -1,0 +1,14 @@
+Coloca aquí los videos finales de cada unidad (formato .mp4, H.264, resolución 1280x720 recomendada).
+
+Nombres esperados por el sitio (index.html ya apunta a estos nombres):
+- unidad1-ilusion-mil-plataformas.mp4   (≈3 min)
+- unidad2-backward-design.mp4           (≈3 min)
+- unidad3-curaduria-academica.mp4       (≈3 min)
+- unidad4-gobernanza-ia-unesco.mp4      (≈3 min)
+
+Los guiones sugeridos para cada video ya están escritos dentro de index.html
+(botón "Ver guion" en cada tarjeta de video) y sirven como base para la grabación
+o para generarlos con herramientas de video con IA (avatar, texto a video, etc.).
+
+Recomendación de peso: comprime cada video a menos de 30-50 MB para que cargue
+rápido en la mayoría de hostings compartidos.
