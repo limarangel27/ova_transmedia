@@ -1,14 +1,14 @@
 /* ============================================================
-   OVA UIIX — Hoja de estilos
+   OVA UIIX â€” Hoja de estilos
    Paleta institucional UIIX (personalizable en :root)
    ============================================================ */
 
 :root {
-  /* --- Colores institucionales UIIX (ajustar aquí si se cuenta con el manual de marca exacto) --- */
-  --uiix-navy: #0A2647;      /* azul institucional profundo — investigación / doctorado */
+  /* --- Colores institucionales UIIX (ajustar aquÃ­ si se cuenta con el manual de marca exacto) --- */
+  --uiix-navy: #0A2647;      /* azul institucional profundo â€” investigaciÃ³n / doctorado */
   --uiix-blue: #144E8C;      /* azul secundario */
-  --uiix-gold: #E4A63A;      /* dorado — innovación */
-  --uiix-orange: #D9722E;    /* acento cálido secundario */
+  --uiix-gold: #E4A63A;      /* dorado â€” innovaciÃ³n */
+  --uiix-orange: #D9722E;    /* acento cÃ¡lido secundario */
   --uiix-bg: #F5F7FA;        /* fondo general */
   --uiix-surface: #FFFFFF;
   --uiix-ink: #16202B;
@@ -47,7 +47,7 @@ ul { padding-left: 1.2em; }
 }
 .skip-link:focus { left: 12px; top: 12px; }
 
-/* ---------------- Header / Navegación ---------------- */
+/* ---------------- Header / NavegaciÃ³n ---------------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
   background: var(--uiix-navy);
@@ -125,7 +125,7 @@ ul { padding-left: 1.2em; }
 .btn--ghost:disabled { opacity: .5; cursor: not-allowed; }
 .btn--sm { padding: 8px 14px; font-size: 13px; }
 
-/* mapa de unidades — nodos conectados (elemento distintivo) */
+/* mapa de unidades â€” nodos conectados (elemento distintivo) */
 .map-net { margin-top: 40px; }
 .map-net__grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; position: relative;
@@ -161,7 +161,7 @@ main > section:nth-of-type(even) { background: var(--uiix-surface); }
   background: #F0F5FA; border-left: 4px solid var(--uiix-blue); padding: 14px 18px; border-radius: 10px; margin: 16px 0;
 }
 
-/* Acordeón */
+/* AcordeÃ³n */
 .accordion { border-top: 1px solid var(--uiix-line); }
 .accordion__item { border-bottom: 1px solid var(--uiix-line); }
 .accordion__trigger {
@@ -170,7 +170,7 @@ main > section:nth-of-type(even) { background: var(--uiix-surface); }
   display: flex; justify-content: space-between; align-items: center; gap: 10px;
 }
 .accordion__trigger::after { content: "+"; font-size: 20px; color: var(--uiix-gold); }
-.accordion__trigger[aria-expanded="true"]::after { content: "–"; }
+.accordion__trigger[aria-expanded="true"]::after { content: "â€“"; }
 .accordion__panel { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
 .accordion__panel p { padding: 0 4px 14px; color: var(--uiix-ink-soft); font-size: 14.5px; }
 
@@ -184,7 +184,7 @@ main > section:nth-of-type(even) { background: var(--uiix-surface); }
 video, audio { width: 100%; border-radius: 8px; background: #000; }
 .guion-box { background: #F5F7FA; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13.5px; color: var(--uiix-ink-soft); }
 
-/* Infografía interactiva (flip card) */
+/* InfografÃ­a interactiva (flip card) */
 .info-card {
   perspective: 1200px; height: 220px; cursor: pointer; outline: none;
 }
@@ -201,6 +201,16 @@ video, audio { width: 100%; border-radius: 8px; background: #000; }
 .info-card__face h4 { color: inherit; margin-bottom: 6px; }
 .info-card__hint { font-size: 12px; opacity: .8; margin-top: auto; }
 
+/* Simulador ramificado */
+.sim-box { background: #F0F5FA; border: 1px solid var(--uiix-line); border-radius: 12px; padding: 16px 18px; margin: 12px 0; }
+.sim-meter { font-size: 12.5px; font-weight: 700; color: var(--uiix-blue); margin: 0 0 8px; }
+.sim-text { font-size: 14px; margin-bottom: 12px; }
+.sim-options { display: flex; flex-direction: column; gap: 8px; }
+.sim-opt { text-align: left; }
+.sim-box--good { background: #DFF5EA; border-color: var(--uiix-green); }
+.sim-box--regular { background: #FDF3DA; border-color: var(--uiix-amber); }
+.sim-box--bad { background: #FBE6E4; border-color: var(--uiix-red); }
+
 /* Actividades gamificadas */
 .game-box { background: #FCFDFE; border: 1px dashed var(--uiix-gold); border-radius: var(--radius); padding: 20px; margin-top: 16px; }
 .game-item { padding: 14px 0; border-bottom: 1px solid var(--uiix-line); }
@@ -215,7 +225,7 @@ video, audio { width: 100%; border-radius: 8px; background: #000; }
 .ideas-list li { margin-bottom: 8px; }
 .conclusion-box { background: #F0F5FA; border-radius: 12px; padding: 18px 22px; margin-top: 10px; }
 
-/* ---------------- Autoevaluación ---------------- */
+/* ---------------- AutoevaluaciÃ³n ---------------- */
 .quiz-q { border: 1px solid var(--uiix-line); border-radius: 12px; padding: 16px 18px; margin-bottom: 16px; background: var(--uiix-surface); }
 .quiz-q legend { font-weight: 700; padding: 0 4px; }
 .quiz-q__tag { display: block; color: var(--uiix-blue); font-size: 12px; font-weight: 800; text-transform: uppercase; margin-bottom: 4px; }
@@ -230,7 +240,7 @@ video, audio { width: 100%; border-radius: 8px; background: #000; }
 #quiz-result h3 { color: var(--uiix-gold); }
 .quiz-rubrica-note { font-size: 13px; color: #C9D6E4; }
 
-/* ---------------- Rúbrica ---------------- */
+/* ---------------- RÃºbrica ---------------- */
 .rubrica-table { width: 100%; border-collapse: collapse; font-size: 13.5px; background: var(--uiix-surface); }
 .rubrica-table th, .rubrica-table td { border: 1px solid var(--uiix-line); padding: 10px 12px; text-align: left; vertical-align: top; }
 .rubrica-table th { background: var(--uiix-navy); color: #fff; }
