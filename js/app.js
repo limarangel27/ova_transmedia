@@ -497,6 +497,62 @@ function initReadAloudButtons() {
   });
 }
 
+/* ================================================================
+   SIMULADOR RAMIFICADO — Unidad 2: "Un día con datos limitados"
+   ================================================================ */
+function renderSimStep(container, stepKey, dataRemaining) {
+  const step = SIM_U2.steps[stepKey];
+  container.innerHTML = `
+    <div class="sim-box">
+      <div class="sim-meter">📶 Datos restantes: <strong>${dataRemaining} MB</strong></div>
+      <p class="sim-text">${step.text}</p>
+      <div class="sim-options">
+        ${step.options.map((opt, i) => `<button class="btn btn--ghost btn--sm sim-opt" data-i="${i}">${opt.label}</button>`).join("")}
+      </div>
+    </div>
+  `;
+  container.querySelectorAll(".sim-opt").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const opt = step.options[Number(btn.dataset.i)];
+      const newData = Math.max(0, dataRemaining - opt.cost);
+      if (opt.next.startsWith("end_")) {
+        renderSimEnding(container, opt.next, newData);
+      } else {
+        renderSimStep(container, opt.next, newData);
+      }
+    });
+  });
+}
+
+function renderSimEnding(container, endKey, dataRemaining) {
+  const ending = SIM_U2.endings[endKey];
+  container.innerHTML = `
+    <div class="sim-box sim-box--${ending.tone}">
+      <h4>${ending.title}</h4>
+      <p class="sim-text">${ending.text}</p>
+      <p class="sim-meter">📶 Datos restantes al final del día: <strong>${dataRemaining} MB</strong></p>
+      <button class="btn btn--primary btn--sm sim-restart">🔁 Intentar otra ruta</button>
+    </div>
+  `;
+  if (ending.tone === "good") {
+    addPoints(30);
+    unlockBadge("dua", "Diseñador DUA");
+  } else if (ending.tone === "regular") {
+    addPoints(15);
+  } else {
+    addPoints(5);
+  }
+  container.querySelector(".sim-restart").addEventListener("click", () => {
+    renderSimStep(container, SIM_U2.start, SIM_U2.steps[SIM_U2.start].data);
+  });
+}
+
+function initSimulator() {
+  const container = document.getElementById("sim-u2");
+  if (!container) return;
+  renderSimStep(container, SIM_U2.start, SIM_U2.steps[SIM_U2.start].data);
+}
+
 /* ---------------- Init general ---------------- */
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("anio").textContent = new Date().getFullYear();
@@ -505,6 +561,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initInfografias();
   initScriptToggles();
   initGames();
+  initSimulator();
   buildFinalQuiz();
   initAgent();
   initReadAloudButtons();
