@@ -185,7 +185,70 @@ const GAME_U4 = [
   { item: "La IA responde distinto según el nombre propio incluido en el prompt, sin relación con el contenido.", answer: "genero", tip: "Sesgo asociativo ligado a nombres propios (género/origen)." }
 ];
 
-/* ---------- Base de conocimiento del Agente Virtual ---------- */
+/* ---------- Simulador Unidad 2: Un día con datos limitados ---------- */
+const SIM_U2 = {
+  start: "s1",
+  steps: {
+    s1: {
+      text: "Son las 6:00 a.m. Tienes 200 MB de datos móviles para todo el día y tu profesor publicó la actividad de hoy en el curso. ¿Qué haces primero?",
+      data: 200,
+      options: [
+        { label: "Ver el video de la clase en alta definición (≈150 MB)", cost: 150, next: "s2a" },
+        { label: "Leer primero el resumen en texto y la guía descargable (≈5 MB)", cost: 5, next: "s2b" }
+      ]
+    },
+    s2a: {
+      text: "El video pesa mucho y se queda cargando a mitad de camino. Te quedan pocos datos y aún no has entendido el tema.",
+      data: 50,
+      options: [
+        { label: "Intentar de nuevo más tarde con wifi público inestable", cost: 30, next: "s3a" },
+        { label: "Rendirte por hoy y esperar a llegar a un lugar con wifi en la noche", cost: 0, next: "end_bad" }
+      ]
+    },
+    s2b: {
+      text: "El resumen en texto te da lo esencial en pocos minutos, sin gastar casi datos. Ahora puedes decidir cómo profundizar.",
+      data: 195,
+      options: [
+        { label: "Escuchar el podcast reflexivo de 1-2 minutos (≈3 MB)", cost: 3, next: "s3b" },
+        { label: "Ver igualmente el video completo por si acaso (≈150 MB)", cost: 150, next: "s3a" }
+      ]
+    },
+    s3a: {
+      text: "Gastaste casi todos tus datos en un solo recurso. Aún te falta hacer la actividad evaluativa y el foro.",
+      data: 20,
+      options: [
+        { label: "Entrar de afán al foro sin haber comprendido bien el tema", cost: 15, next: "end_bad" },
+        { label: "Buscar apoyo en un compañero para que te resuma lo esencial", cost: 5, next: "end_regular" }
+      ]
+    },
+    s3b: {
+      text: "Con el resumen y el podcast ya entendiste la idea central, gastando muy pocos datos. Te sobran datos para el resto del día.",
+      data: 190,
+      options: [
+        { label: "Participar en el foro de discusión (≈2 MB)", cost: 2, next: "end_good" },
+        { label: "Descargar la plantilla de la actividad para trabajarla sin conexión (≈1 MB)", cost: 1, next: "end_good" }
+      ]
+    }
+  },
+  endings: {
+    end_bad: {
+      title: "😣 Final: Día perdido",
+      text: "Gastaste tus datos en el formato más pesado y llegaste sin datos ni comprensión clara a la actividad evaluativa. Este es exactamente el riesgo que corre un estudiante cuando el diseño instruccional no ofrece alternativas livianas.",
+      tone: "bad"
+    },
+    end_regular: {
+      title: "😐 Final: La sacaste con ayuda externa",
+      text: "Lograste cumplir gracias a un compañero, no gracias al diseño del curso. Es un síntoma de que la guía necesita más flexibilidad de formatos (principio DUA de representación múltiple).",
+      tone: "regular"
+    },
+    end_good: {
+      title: "🎉 Final: Día productivo y equitativo",
+      text: "Priorizaste los formatos livianos (texto, podcast, plantilla descargable) y llegaste con datos de sobra a participar en el curso. Así se ve un diseño instruccional realmente inclusivo con la conectividad real del estudiantado.",
+      tone: "good"
+    }
+  }
+};
+
 const AGENT_KB = [
   {
     keys: ["hola", "buenas", "buenos dias", "buenas tardes", "hey"],
