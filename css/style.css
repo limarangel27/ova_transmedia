@@ -60,10 +60,8 @@ ul { padding-left: 1.2em; }
 }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; }
 .brand__mark {
-  width: 42px; height: 42px; border-radius: 10px;
-  background: linear-gradient(135deg, var(--uiix-gold), var(--uiix-orange));
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display); font-weight: 700; color: var(--uiix-navy); font-size: 18px;
+  width: 42px; height: 42px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
 }
 .brand__text strong { display: block; font-family: var(--font-display); font-size: 17px; letter-spacing: .3px; }
 .brand__text span { display: block; font-size: 11.5px; color: #C9D6E4; }
