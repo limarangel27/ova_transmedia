@@ -1,14 +1,14 @@
 /* ============================================================
-   OVA UIIX â€” Hoja de estilos
+   OVA UIIX — Hoja de estilos
    Paleta institucional UIIX (personalizable en :root)
    ============================================================ */
 
 :root {
-  /* --- Colores institucionales UIIX (ajustar aquÃ­ si se cuenta con el manual de marca exacto) --- */
-  --uiix-navy: #0A2647;      /* azul institucional profundo â€” investigaciÃ³n / doctorado */
+  /* --- Colores institucionales UIIX (ajustar aquí si se cuenta con el manual de marca exacto) --- */
+  --uiix-navy: #0A2647;      /* azul institucional profundo — investigación / doctorado */
   --uiix-blue: #144E8C;      /* azul secundario */
-  --uiix-gold: #E4A63A;      /* dorado â€” innovaciÃ³n */
-  --uiix-orange: #D9722E;    /* acento cÃ¡lido secundario */
+  --uiix-gold: #E4A63A;      /* dorado — innovación */
+  --uiix-orange: #D9722E;    /* acento cálido secundario */
   --uiix-bg: #F5F7FA;        /* fondo general */
   --uiix-surface: #FFFFFF;
   --uiix-ink: #16202B;
@@ -47,7 +47,7 @@ ul { padding-left: 1.2em; }
 }
 .skip-link:focus { left: 12px; top: 12px; }
 
-/* ---------------- Header / NavegaciÃ³n ---------------- */
+/* ---------------- Header / Navegación ---------------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
   background: var(--uiix-navy);
@@ -123,7 +123,7 @@ ul { padding-left: 1.2em; }
 .btn--ghost:disabled { opacity: .5; cursor: not-allowed; }
 .btn--sm { padding: 8px 14px; font-size: 13px; }
 
-/* mapa de unidades â€” nodos conectados (elemento distintivo) */
+/* mapa de unidades — nodos conectados (elemento distintivo) */
 .map-net { margin-top: 40px; }
 .map-net__grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; position: relative;
@@ -159,7 +159,7 @@ main > section:nth-of-type(even) { background: var(--uiix-surface); }
   background: #F0F5FA; border-left: 4px solid var(--uiix-blue); padding: 14px 18px; border-radius: 10px; margin: 16px 0;
 }
 
-/* AcordeÃ³n */
+/* Acordeón */
 .accordion { border-top: 1px solid var(--uiix-line); }
 .accordion__item { border-bottom: 1px solid var(--uiix-line); }
 .accordion__trigger {
@@ -168,7 +168,7 @@ main > section:nth-of-type(even) { background: var(--uiix-surface); }
   display: flex; justify-content: space-between; align-items: center; gap: 10px;
 }
 .accordion__trigger::after { content: "+"; font-size: 20px; color: var(--uiix-gold); }
-.accordion__trigger[aria-expanded="true"]::after { content: "â€“"; }
+.accordion__trigger[aria-expanded="true"]::after { content: "–"; }
 .accordion__panel { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
 .accordion__panel p { padding: 0 4px 14px; color: var(--uiix-ink-soft); font-size: 14.5px; }
 
@@ -182,7 +182,7 @@ main > section:nth-of-type(even) { background: var(--uiix-surface); }
 video, audio { width: 100%; border-radius: 8px; background: #000; }
 .guion-box { background: #F5F7FA; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13.5px; color: var(--uiix-ink-soft); }
 
-/* InfografÃ­a interactiva (flip card) */
+/* Infografía interactiva (flip card) */
 .info-card {
   perspective: 1200px; height: 220px; cursor: pointer; outline: none;
 }
@@ -223,7 +223,7 @@ video, audio { width: 100%; border-radius: 8px; background: #000; }
 .ideas-list li { margin-bottom: 8px; }
 .conclusion-box { background: #F0F5FA; border-radius: 12px; padding: 18px 22px; margin-top: 10px; }
 
-/* ---------------- AutoevaluaciÃ³n ---------------- */
+/* ---------------- Autoevaluación ---------------- */
 .quiz-q { border: 1px solid var(--uiix-line); border-radius: 12px; padding: 16px 18px; margin-bottom: 16px; background: var(--uiix-surface); }
 .quiz-q legend { font-weight: 700; padding: 0 4px; }
 .quiz-q__tag { display: block; color: var(--uiix-blue); font-size: 12px; font-weight: 800; text-transform: uppercase; margin-bottom: 4px; }
@@ -238,7 +238,7 @@ video, audio { width: 100%; border-radius: 8px; background: #000; }
 #quiz-result h3 { color: var(--uiix-gold); }
 .quiz-rubrica-note { font-size: 13px; color: #C9D6E4; }
 
-/* ---------------- RÃºbrica ---------------- */
+/* ---------------- Rúbrica ---------------- */
 .rubrica-table { width: 100%; border-collapse: collapse; font-size: 13.5px; background: var(--uiix-surface); }
 .rubrica-table th, .rubrica-table td { border: 1px solid var(--uiix-line); padding: 10px 12px; text-align: left; vertical-align: top; }
 .rubrica-table th { background: var(--uiix-navy); color: #fff; }
@@ -301,3 +301,8 @@ video, audio { width: 100%; border-radius: 8px; background: #000; }
 .text-center { text-align: center; }
 .mt-lg { margin-top: 32px; }
 .small { font-size: 13px; color: var(--uiix-ink-soft); }
+
+
+/* Encuesta (Google Forms embebido) */
+.gform-wrap { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: var(--uiix-surface); }
+.gform-wrap iframe { display: block; border: none; }
